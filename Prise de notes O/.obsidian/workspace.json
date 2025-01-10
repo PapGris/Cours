@@ -150,17 +150,18 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:Create new drawing": false,
       "switcher:Ouvrir le sélecteur rapide": false,
       "graph:Ouvrir la vue graphique": false,
       "canvas:Créer une nouvelle toile": false,
       "daily-notes:Ouvrir la note quotidienne": false,
       "templates:Insérer le modèle": false,
-      "command-palette:Ouvrir la palette de commandes": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "6c948228a6c79cce",
+  "active": "39992a0039213a2b",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2025-01-10 13.58.40.excalidraw.md",
     "Cours/HTML CSS/10.01.2025.md",
     "Cours/Design/UX Web Design 07.01.2025.md",
     "Cours/HTML CSS/10.01.2025",
