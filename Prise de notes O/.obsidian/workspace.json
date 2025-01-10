@@ -1,0 +1,200 @@
+{
+  "main": {
+    "id": "68b5e99451513721",
+    "type": "split",
+    "children": [
+      {
+        "id": "069ec79fe5249c87",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39992a0039213a2b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cours/HTML CSS/10.01.2025.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "10.01.2025"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d32fbc6823b08ef8",
+    "type": "split",
+    "children": [
+      {
+        "id": "63b5c10ea5bde788",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6c948228a6c79cce",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorateur de fichiers"
+            }
+          },
+          {
+            "id": "03d3764381dc1957",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#UX",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Rechercher"
+            }
+          },
+          {
+            "id": "a9b47becbbc3a91d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Signet"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "78f6df6de190eea1",
+    "type": "split",
+    "children": [
+      {
+        "id": "8c17c8817a610261",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c7aa612b64d29c10",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Rétroliens"
+            }
+          },
+          {
+            "id": "7613dddd8117c9ea",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Liens sortants"
+            }
+          },
+          {
+            "id": "58e7d97bddfbc6d3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Mots-clés"
+            }
+          },
+          {
+            "id": "b669550fe33c6d7f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Plan"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Ouvrir le sélecteur rapide": false,
+      "graph:Ouvrir la vue graphique": false,
+      "canvas:Créer une nouvelle toile": false,
+      "daily-notes:Ouvrir la note quotidienne": false,
+      "templates:Insérer le modèle": false,
+      "command-palette:Ouvrir la palette de commandes": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "6c948228a6c79cce",
+  "lastOpenFiles": [
+    "Cours/HTML CSS/10.01.2025.md",
+    "Cours/Design/UX Web Design 07.01.2025.md",
+    "Cours/HTML CSS/10.01.2025",
+    "Cours/HTML CSS",
+    "Cours/BDD/07.01.2025.md",
+    "Cours/BDD/Sans titre.md",
+    "Excalidraw/MLD Exemple.md",
+    "Cours/BDD/06.01.2025.md",
+    "Excalidraw/MCD Exemple.md",
+    "Cours/GIT/GIT Control.md",
+    "Excalidraw/Drawing 2025-01-06 08.40.58.excalidraw.md",
+    "Excalidraw/Tableau observation WD.md",
+    "Cours/Design/Tableau Observation WD.canvas",
+    "A FAIRE/Wordpress",
+    "A FAIRE",
+    "Cours/Design",
+    "2025-01-02.md",
+    "Cours/Bootstrap/Lexique.md",
+    "Excalidraw",
+    "Cours/BDD",
+    "Cours/Cours/Cours 24.12.2024.md",
+    "Cours/Cours/Cours 02.01.2025.md",
+    "Cours/GIT/GIT Remote.md",
+    "Cours/Bootstrap",
+    "Cours/Sans titre.md",
+    "Cours/GIT",
+    "Cours/Module A/Séance 2.md",
+    "Cours/Module A/Séance 1.md",
+    "Cours/Algo/Algo 10-09-2024.md",
+    "fonction.md",
+    "Veille/Ressources web.md",
+    "Cours/Algo",
+    "README.md",
+    "ALGO/Sommaire.md",
+    "Welcome.md"
+  ]
+}
