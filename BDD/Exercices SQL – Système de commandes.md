@@ -27,8 +27,21 @@ SET prix_total = quantite*prix_unitaire;
 
 5. Obtenir le montant total pour chaque commande et y voir facilement la date associée à cette commande ainsi que le prénom et nom du client associé
 
+SELECT client.prenom, client.nom, commande.date_achat, commande_id, ROUND(SUM(prix_total), 2) AS prix_commande 
+FROM commande_ligne 
+LEFT JOIN commande ON commande.id = commande_ligne.commande_id
+LEFT JOIN client ON client.id = commande.client_id
+GROUP BY commande_id;
 
 6. (difficulté très haute) Enregistrer le montant total de chaque commande dans le champ intitulé “cache_prix_total”
+
+UPDATE commande AS t1 
+INNER JOIN 
+    ( SELECT commande_id, SUM(commande_ligne.prix_total) AS p_total 
+      FROM commande_ligne 
+      GROUP BY commande_id ) t2 
+          ON  t1.id = t2.commande_id 
+SET t1.cache_prix_total = t2.p_total
 
 7. Obtenir le montant global de toutes les commandes, pour chaque mois
 
