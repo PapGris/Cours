@@ -44,6 +44,21 @@ header nav ul li a{
     padding: 50px;
 }
 
+.products img {
+    width: 100%;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.products article {
+    box-sizing: border-box;
+    width: 100%;
+}
+
 @media (min-width: 500px) {
     body { 
         border-top: 5px solid orange;
@@ -58,6 +73,9 @@ header nav ul li a{
         width: 768px;
         margin: auto;
     }
+    .products article {
+        width: 50%;
+    }
 }
 
 @media (min-width: 992px) {
@@ -66,6 +84,9 @@ header nav ul li a{
     }
     .container {
         width: 992px;
+    }
+    .products article {
+        width: 33%;
     }
 }
 

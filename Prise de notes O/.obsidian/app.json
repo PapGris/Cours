@@ -4,5 +4,6 @@
   "alwaysUpdateLinks": true,
   "autoPairBrackets": false,
   "autoPairMarkdown": false,
-  "smartIndentList": false
+  "smartIndentList": false,
+  "autoConvertHtml": false
 }

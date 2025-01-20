@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="traitement.php" method="post">
+        <ul>
+            <li>
+                <label for="prénom">Votre Prénom</label>
+                <input type="text" name="firstname" id="prénom">
+                <input type="submit" value="ok">
+            </li>
+            <li>
+                <input type="radio" name="test1" value="0">oui
+                <input type="radio" name="test1" value="1">non
+                <input type="radio" name="test1" value="2">peut être
+            </li>
+            <li>
+                <ul>
+                    <li><input type="radio" name="test2" value="0">oui</li>
+                    <li><input type="radio" name="test2" value="1">non</li>
+                    <li><input type="radio" name="test2" value="2">peut être</li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" name="test3" value="10">bla
+                <input type="checkbox" name="test3" value="11">bla bla
+                <input type="checkbox" name="test3" value="12">bla bla bla
+            </li>
+            <li>
+                <input type="text" name="Votre texte" value="Le texte">
+            </li>
+            <li>
+                <textarea name="Texte">Le Texte multilignes</textarea>
+            </li>
+            <li>
+                <select name="Texte" required>
+                    <option value="">Choisissez une option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                </select>
+            </li>
+        </ul>
+    </form>
+    
+</body>
+</html>
