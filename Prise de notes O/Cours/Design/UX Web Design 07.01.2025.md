@@ -23,9 +23,15 @@ Créer un logo (cheap) :
 - [https://www.logomaker.com/](https://www.logomaker.com/ "https://www.logomaker.com/")
 - [https://turbologo.com/](https://turbologo.com/ "https://turbologo.com/")
 
-Carte mentale :
+Arborescence (mind map) : 
+
+- https://miro.com/
+- https://www.mindnode.com/
+
+Zoning :
 
 - 
+
 
 ------------------------------------------------------
 
@@ -80,7 +86,7 @@ Carte mentale :
 	
 3. **Synthétiser vos observations** : 
 - Utiliser une grille d’analyse comme celle-ci :
-    [[Tableau observation WD]]
+    ![[Tableau observation WD]]
 
 
 

@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cours/HTML CSS/Formulaire.md",
+                "file": "Cours/Design/WB 14.01.2025.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Formulaire"
+              "title": "WB 14.01.2025"
+            }
+          },
+          {
+            "id": "3daa50f324178df5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cours/Design/FIGMA.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "FIGMA"
             }
           },
           {
@@ -59,7 +73,8 @@
               "title": "Vue graphique"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -197,27 +212,32 @@
       "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "e3ceb8af1ea4c868",
+  "active": "3daa50f324178df5",
   "lastOpenFiles": [
+    "Cours/Design/WB 14.01.2025.md",
+    "Cours/Design/FIGMA.md",
+    "PJ/Pasted image 20250122104207.png",
+    "Cours/Design/UX Web Design 07.01.2025.md",
+    "PJ/Pasted image 20250122092622.png",
+    "PJ/Pasted image 20250122091711.png",
+    "Excalidraw/Tableau observation WD.md",
+    "Cours/HTML CSS/Formulaire.md",
     "PJ/Pasted image 20250120143008.png",
     "Cours/HTML CSS/10.01.2025.md",
     "Cours/HTML CSS/16.01.2025.md",
     "A FAIRE/Portfolio.md",
     "Veille/Ressources web.md",
     "PJ/Pasted image 20250120140415.png",
-    "Cours/HTML CSS/Formulaire.md",
     "PJ",
     "Excalidraw/exemple HTML form.md",
     "Excalidraw/Drawing 2025-01-10 13.58.40.excalidraw.md",
     "Excalidraw/Drawing 2025-01-06 08.40.58.excalidraw.md",
-    "Cours/Design/WB 14.01.2025.md",
     "Cours/GIT/GIT Control.md",
     "Cours/GIT/GIT Remote.md",
     "A FAIRE/Lien utile.md",
     "Excalidraw/Maquette E-commerce.md",
     "Cours/Cours/Cours 24.12.2024.md",
     "Cours/Cours/Cours 02.01.2025.md",
-    "Cours/Design/UX Web Design 07.01.2025.md",
     "Excalidraw/Zoning.md",
     "Excalidraw/Design Thinking.md",
     "Cours/BDD/MCD - MLD.md",
@@ -227,7 +247,6 @@
     "Cours/HTML CSS",
     "Cours/BDD/Sans titre.md",
     "Excalidraw/MCD Exemple.md",
-    "Excalidraw/Tableau observation WD.md",
     "Cours/Design/Tableau Observation WD.canvas",
     "A FAIRE/Wordpress",
     "A FAIRE",
