@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/utilisateur.css">
+    <script src="https://kit.fontawesome.com/3816b7ece5.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <a href="">
+            <img src="" alt="" id="logoSite">
+        </a>
+        <div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Tableau de bord</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="">
+                            <i class="fas fa-user"></i>
+                            <span>Utilisateur</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-handshake"></i>
+                            <span>Clients</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-cart-shopping"></i>
+                            <span>Produits</span>
+                        </a>
+                    </li>
+                    <li class="login">
+                        <a href="">
+                            <i class="fas fa-right-to-bracket"></i>
+                            <span>Connexion</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="wrapper">
+            <div class="title">
+                <span>Café aux dés</span>
+                <h2>Tableau de bord</h2>
+            </div>
+            <div class="user">
+                <div class="search">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Recherche"/>
+                </div>
+                <img src="images/logo.png" alt="">
+            </div>
+        </div>
+        <div class="card-container">
+            <h3>Produits</h3>
+            <div class="card-wrapper">
+                <div class="card-products light-red">
+                    <div class="card-header">
+                        <div class="amount">
+                            <span class="title">Ajout du mois</span>
+                            <span class="ajout-products">50</span>
+                        </div>
+                        <i class="fa-solid fa-shoe-prints icon"></i>
+                    </div>
+                    <span class="add-detail">Baskets</span>
+                </div>
+                <div class="card-products light-purple">
+                    <div class="card-header">
+                        <div class="amount">
+                            <span class="title">Ajout du mois</span>
+                            <span class="ajout-products">25</span>
+                        </div>
+                        <i class="fas fa-shirt icon dark-purple"></i>
+                    </div>
+                    <span class="add-detail">Vêtements</span>
+                </div>
+                <div class="card-products light-green">
+                    <div class="card-header">
+                        <div class="amount">
+                            <span class="title">Ajout du mois</span>
+                            <span class="ajout-products">30</span>
+                        </div>
+                        <i class="fas fa-spray-can icon dark-green"></i>
+                    </div>
+                    <span class="add-detail">Parfums</span>
+                </div>
+                <div class="card-products light-blue">
+                    <div class="card-header">
+                        <div class="amount">
+                            <span class="title">Ajout du mois</span>
+                            <span class="ajout-products">10</span>
+                        </div>
+                        <i class="fa-solid fa-gem icon dark-blue"></i>
+                    </div>
+                    <span class="add-detail">Bijoux</span>
+                </div>
+            </div>
+        </div>
+        <div class="tabular-wrapper">
+            <h3>Clients</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Date</th>
+                            <th>Produit</th>
+                            <th>Catégorie</th>
+                            <th>Quantité</th>
+                            <th>Action</th>
+                        </tr>
+                        <div class="table-body">
+                            <tr>
+                                <td>Nike</td>
+                                <td>2025-01-01</td>
+                                <td>Basket</td>
+                                <td>Homme</td>
+                                <td>50</td>
+                                <td><button>Modifier</button></td>
+                            </tr>
+                            <tr>
+                                <td>Lacoste</td>
+                                <td>2025-01-01</td>
+                                <td>T-shirt</td>
+                                <td>Femme</td>
+                                <td>25</td>
+                                <td><button>Modifier</button></td>
+                            </tr>
+                            <tr>
+                                <td>Chanel</td>
+                                <td>2025-01-01</td>
+                                <td>Eau de parfum</td>
+                                <td>Homme</td>
+                                <td>30</td>
+                                <td><button>Modifier</button></td>
+                            </tr>
+                            <tr>
+                                <td>Pandora</td>
+                                <td>2025-01-01</td>
+                                <td>Bague</td>
+                                <td>Femme</td>
+                                <td>10</td>
+                                <td><button>Modifier</button></td>
+                            </tr>
+                        </div>
+                        <div class="table-foot">
+                            <tr>
+                                <td colspan="7">Totale des produits: 115</td>
+                            </tr>
+                        </div>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
