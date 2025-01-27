@@ -9,6 +9,7 @@ Espace : Manipuler la page
 Espace + Ctrl : Loupe
 
 Général
+Pipette : I
 Nouvel objet :
 Rectangle : R
 Ligne : L

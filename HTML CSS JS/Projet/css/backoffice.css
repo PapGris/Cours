@@ -1,25 +1,38 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    background-color: #b7d0de;
 }
 
-header {    
+header {  
+    position: sticky ;
+    top: 0;  
     display: flex;
-    background-color: #c8a58c;
+    background-color: #aeb1b0;
     padding: 5px;
     flex-wrap: wrap;
     justify-content: space-between;
     box-sizing: border-box;
-    height: 50px;   
+    height: 70px;   
+    z-index: 999;
 }
 
 header img {
-    width: 50px;
+    width: 80px;
+    vertical-align: middle;
+}
+
+header span {
+    font-size: 35px;
+    color: #bf6a02;
+    margin-left: 10px;
+    font-family: fantasy;
     vertical-align: middle;
 }
 
 nav {
-    background-color: darkkhaki;
+    background-color: #e27b00;
     position: absolute;
     left: -95px;
     height:calc(100% - 50px);
@@ -42,7 +55,7 @@ nav>ul {
 }
 
 nav a {
-    color: brown;    
+    color: #004972;    
 }
 
 main {
@@ -57,7 +70,7 @@ table {
 }
 
 thead {
-    background: #c8a58c;
+    background: #62b5e4;
     color: #303030;
 }
 
@@ -72,4 +85,9 @@ td {
     font-size: 14px;
     color: #303030;
     border: solid 1px #303030;
+}
+
+button {
+    color: #e27b00;
+    background-color: #b7d0de;
 }
