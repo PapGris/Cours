@@ -18,6 +18,16 @@ header {
     z-index: 999;
 }
 
+header>div.nom_compte  {
+    margin-top: -5px;
+    background-color: #62b5e4;
+    border: solid 1px #004972;
+}
+
+header>div.nom_compte>span {
+    font-size: 20px;
+}
+
 header img {
     width: 80px;
     vertical-align: middle;
@@ -29,6 +39,12 @@ header span {
     margin-left: 10px;
     font-family: fantasy;
     vertical-align: middle;
+}
+
+header button {
+    margin: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 nav {
@@ -71,13 +87,13 @@ table {
 
 thead {
     background: #62b5e4;
-    color: #303030;
+    color: #004972;
 }
 
 th {
     padding: 15px;
     text-align: left;
-    border: solid 1px #303030;
+    border: solid 1px #004972;
 }
 
 td {

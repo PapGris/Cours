@@ -1,4 +1,4 @@
-#Bootstrap #Lexique #HTML #CSS #JS
+#Bootstrap
 
 
 -  <div class="container"> : adapter automatiquement le container au format ( container-fluid si besoin d'avoir en contenu en plein ecran sur la page )
@@ -11,5 +11,4 @@
      grand : "lg" si  ≥992px
      très grand : "xl" si ≥1200px
      très très grand : "xxl" si ≥1400px
-
 
