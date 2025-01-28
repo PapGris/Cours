@@ -2,7 +2,8 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0px;
-    background-color: #b7d0de;
+    background-image: url("../img/logogaming.png");
+    background-attachment: fixed;
 }
 
 header {  
