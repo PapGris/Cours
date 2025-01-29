@@ -4,147 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "069ec79fe5249c87",
+        "id": "e5c93f734304bf4a",
         "type": "tabs",
         "children": [
           {
-            "id": "e3ceb8af1ea4c868",
+            "id": "da8b467da0a454ec",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cours/Design/WB 14.01.2025.md",
+                "file": "Cours/BDD/MCD - MLD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "WB 14.01.2025"
+              "title": "MCD - MLD"
             }
           },
           {
-            "id": "3daa50f324178df5",
+            "id": "81e45da345b78c0e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "A FAIRE/Portfolio.md",
+                "file": "Cours/BDD/MongoDB.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Portfolio"
-            }
-          },
-          {
-            "id": "459fcc95351ade84",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "A FAIRE/CRUD.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CRUD"
-            }
-          },
-          {
-            "id": "7ba4489b49eba3ed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cours/HTML CSS/10.01.2025.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "10.01.2025"
-            }
-          },
-          {
-            "id": "db6a9bb24a9ec1f2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cours/HTML CSS/10.01.2025.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "10.01.2025"
-            }
-          },
-          {
-            "id": "5cb3bf76c90c7fea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cours/HTML CSS/Bootstrap.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Bootstrap"
-            }
-          },
-          {
-            "id": "692d8e6aedc076ed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cours/Bootstrap/Lexique.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Lexique"
-            }
-          },
-          {
-            "id": "432c09d1c71aa3f4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cours/HTML CSS/16.01.2025.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "16.01.2025"
-            }
-          },
-          {
-            "id": "6e521acd4a01ff5c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cours/HTML CSS/16.01.2025.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "16.01.2025"
-            }
-          },
-          {
-            "id": "b7cdaf686220f4c6",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vue graphique"
+              "title": "MongoDB"
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -282,24 +174,26 @@
       "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "692d8e6aedc076ed",
+  "active": "81e45da345b78c0e",
   "lastOpenFiles": [
+    "Cours/BDD/MCD - MLD.md",
+    "Cours/BDD/MongoDB.md",
+    "Cours/BDD/Commande SQL.md",
+    "Cours/Design/WB 14.01.2025.md",
+    "A FAIRE/Portfolio.md",
+    "A FAIRE/CRUD.md",
+    "Cours/HTML CSS/10.01.2025.md",
     "Cours/HTML CSS/Bootstrap.md",
     "Cours/Bootstrap/Lexique.md",
+    "Cours/HTML CSS/16.01.2025.md",
     "A FAIRE/A voir.md",
     "Cours/HTML CSS/Flex et Grid.md",
-    "Cours/HTML CSS/10.01.2025.md",
-    "A FAIRE/CRUD.md",
     "A FAIRE/Lien utile.md",
-    "A FAIRE/Portfolio.md",
     "Cours/HTML CSS/Variables CSS.md",
-    "Cours/HTML CSS/16.01.2025.md",
     "PJ/Pasted image 20250120140415.png",
     "Cours/Design/FIGMA.md",
     "Sans titre",
     "Cours/Cours/Cours 24.12.2024.md",
-    "Cours/BDD/MCD - MLD.md",
-    "Cours/Design/WB 14.01.2025.md",
     "PJ/Pasted image 20250122104207.png",
     "Cours/Design/UX Web Design 07.01.2025.md",
     "PJ/Pasted image 20250122092622.png",
@@ -315,8 +209,6 @@
     "Cours/GIT/GIT Control.md",
     "Cours/GIT/GIT Remote.md",
     "Excalidraw/Maquette E-commerce.md",
-    "Cours/Cours/Cours 02.01.2025.md",
-    "Excalidraw/Zoning.md",
     "Cours/HTML CSS/10.01.2025",
     "Cours/HTML CSS",
     "Cours/Design/Tableau Observation WD.canvas",
