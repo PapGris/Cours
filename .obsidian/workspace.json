@@ -1,56 +1,37 @@
 {
   "main": {
-    "id": "68b5e99451513721",
+    "id": "70d9d60e7fe18cae",
     "type": "split",
     "children": [
       {
-        "id": "e5c93f734304bf4a",
+        "id": "b72bfc685532b7e6",
         "type": "tabs",
         "children": [
           {
-            "id": "da8b467da0a454ec",
+            "id": "1573adc4c086ded2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cours/BDD/MCD - MLD.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "MCD - MLD"
-            }
-          },
-          {
-            "id": "81e45da345b78c0e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cours/BDD/MCD - MLD.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MCD - MLD"
+              "title": "Nouvel onglet"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "d32fbc6823b08ef8",
+    "id": "c6d35b38a4a9f62f",
     "type": "split",
     "children": [
       {
-        "id": "63b5c10ea5bde788",
+        "id": "5fba8b9ec985ca5f",
         "type": "tabs",
         "children": [
           {
-            "id": "6c948228a6c79cce",
+            "id": "cad670fc991768bc",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -62,12 +43,12 @@
             }
           },
           {
-            "id": "03d3764381dc1957",
+            "id": "18dc613b51be5fef",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#CSS",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -79,7 +60,7 @@
             }
           },
           {
-            "id": "a9b47becbbc3a91d",
+            "id": "224d727e00e4c2e4",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -92,18 +73,18 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
-    "id": "78f6df6de190eea1",
+    "id": "06cacb7982638155",
     "type": "split",
     "children": [
       {
-        "id": "8c17c8817a610261",
+        "id": "0c2ad7bb1f5af45d",
         "type": "tabs",
         "children": [
           {
-            "id": "c7aa612b64d29c10",
+            "id": "191f258e8cc9f0d4",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -121,7 +102,7 @@
             }
           },
           {
-            "id": "7613dddd8117c9ea",
+            "id": "024dd4cfc4cd8a04",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -134,7 +115,7 @@
             }
           },
           {
-            "id": "58e7d97bddfbc6d3",
+            "id": "aa29dc2cf8fd7c53",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -147,7 +128,7 @@
             }
           },
           {
-            "id": "b669550fe33c6d7f",
+            "id": "67a425656dccbba7",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -165,7 +146,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:Create new drawing": false,
       "switcher:Ouvrir le sélecteur rapide": false,
       "graph:Ouvrir la vue graphique": false,
       "canvas:Créer une nouvelle toile": false,
@@ -174,49 +154,6 @@
       "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "81e45da345b78c0e",
-  "lastOpenFiles": [
-    "Cours/BDD/MongoDB.md",
-    "Cours/BDD/MCD - MLD.md",
-    "Cours/BDD/Commande SQL.md",
-    "Cours/Algo/Algo 10-09-2024.md",
-    "A FAIRE/CRUD.md",
-    "Cours/Design/WB 14.01.2025.md",
-    "A FAIRE/Portfolio.md",
-    "Cours/HTML CSS/10.01.2025.md",
-    "Cours/HTML CSS/Bootstrap.md",
-    "Cours/Bootstrap/Lexique.md",
-    "Cours/HTML CSS/16.01.2025.md",
-    "A FAIRE/A voir.md",
-    "Cours/HTML CSS/Flex et Grid.md",
-    "A FAIRE/Lien utile.md",
-    "Cours/HTML CSS/Variables CSS.md",
-    "PJ/Pasted image 20250120140415.png",
-    "Cours/Design/FIGMA.md",
-    "Sans titre",
-    "Cours/Cours/Cours 24.12.2024.md",
-    "PJ/Pasted image 20250122104207.png",
-    "Cours/Design/UX Web Design 07.01.2025.md",
-    "PJ/Pasted image 20250122092622.png",
-    "PJ/Pasted image 20250122091711.png",
-    "Excalidraw/Tableau observation WD.md",
-    "Cours/HTML CSS/Formulaire.md",
-    "PJ/Pasted image 20250120143008.png",
-    "Veille/Ressources web.md",
-    "PJ",
-    "Excalidraw/exemple HTML form.md",
-    "Excalidraw/Drawing 2025-01-10 13.58.40.excalidraw.md",
-    "Excalidraw/Drawing 2025-01-06 08.40.58.excalidraw.md",
-    "Cours/GIT/GIT Control.md",
-    "Cours/GIT/GIT Remote.md",
-    "Cours/HTML CSS/10.01.2025",
-    "Cours/HTML CSS",
-    "Cours/Design/Tableau Observation WD.canvas",
-    "A FAIRE/Wordpress",
-    "A FAIRE",
-    "Cours/Design",
-    "Excalidraw",
-    "Cours/BDD",
-    "Cours/Bootstrap"
-  ]
+  "active": "1573adc4c086ded2",
+  "lastOpenFiles": []
 }
