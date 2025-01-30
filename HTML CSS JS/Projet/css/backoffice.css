@@ -48,16 +48,29 @@ header button {
     margin-left: 20px;
 }
 
-nav {
+nav.navleft{
     background-color: #e27b00;
-    position: absolute;
+    position: fixed;
     left: -95px;
     height:calc(100% - 50px);
     border-radius:0% 10% 10% 0%;
 }
 
-nav:hover {
+nav.navright{
+    background-color: #e27b00;
+    position: fixed;
+    right: -90px;
+    height:calc(100% - 50px);
+    border-radius:10% 0% 0% 10%;
+}
+
+nav.navleft:hover {
     left: 0px;
+    transition: all 0.5s;
+}
+
+nav.navright:hover {
+    right: 0px;
     transition: all 0.5s;
 }
 
