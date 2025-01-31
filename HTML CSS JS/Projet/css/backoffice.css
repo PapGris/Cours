@@ -3,6 +3,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0px;
     background-image: url("../img/logogaming.png");
+    background-position: 100%;
     background-attachment: fixed;
 }
 
@@ -91,6 +92,11 @@ nav a {
 main {
     padding: 0px 50px;
     margin-left: 80px;
+    margin-right: 80px;
+}
+
+main p {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 table {
