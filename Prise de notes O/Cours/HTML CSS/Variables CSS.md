@@ -1,5 +1,6 @@
 #CSS #variables
 
+https://www.youtube.com/watch?v=pi-jnnNFTiQ
 
 **Exemple de variable :**
 

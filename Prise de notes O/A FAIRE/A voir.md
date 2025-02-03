@@ -5,3 +5,5 @@ Mettre le texte au centre
 les variables CSS
 
 Flex/Grid
+
+c'est quoi le RGPD
