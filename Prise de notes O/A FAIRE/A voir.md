@@ -6,3 +6,5 @@ Flex/Grid
 
 c'est quoi le RGPD
 REACT
+
+Box sizing

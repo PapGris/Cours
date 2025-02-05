@@ -85,6 +85,25 @@ header nav ul ul {
     text-align: center;
 }
 
+.container-with-sticky {
+    display: flex;
+}
+
+.container-with-sticky>div.sticky {
+    box-sizing: border-box;
+    width: 25%;
+}
+
+.container-with-sticky>div.sticky>div {
+    position: sticky;
+    top: 30px;
+}
+
+.container-with-sticky>div:not(.sticky) {
+    box-sizing: border-box;
+    width: 75%;
+}
+
 footer div.container {
     display: flex;
 }
