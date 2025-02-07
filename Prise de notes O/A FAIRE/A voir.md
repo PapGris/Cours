@@ -8,3 +8,5 @@ c'est quoi le RGPD
 REACT
 
 Box sizing
+
+difference SQL / NoSQL
