@@ -2,8 +2,8 @@
   "newFileLocation": "current",
   "attachmentFolderPath": "PJ",
   "alwaysUpdateLinks": true,
-  "autoPairBrackets": false,
+  "autoPairBrackets": true,
   "autoPairMarkdown": false,
-  "smartIndentList": false,
+  "smartIndentList": true,
   "autoConvertHtml": false
 }
