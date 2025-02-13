@@ -54,12 +54,13 @@ switch ($poste) {
         $salairedebase = 1200;
         break;
     default:
-        $salairedebase = 0;
+        echo "Poste inconnu";
+        exit;
 }
 
-if ($ancienneté >= 5) {
+if ($ancienneté > 5) {
     $prime = $salairedebase*0.1;
-} elseif ($ancienneté >= 10) {
+} elseif ($ancienneté > 10) {
     $prime = $salairedebase*0.2;    
 } else {
     $prime = $salairedebase*0; 
