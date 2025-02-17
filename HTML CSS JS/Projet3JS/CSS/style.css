@@ -1,0 +1,16 @@
+
+
+.error {
+    color:#FF0000;
+    font-weight:normal;
+}
+
+button {
+    
+    background-color: beige;
+    border-radius: 10%;
+}
+
+button:hover {
+    background-color: greenyellow;
+}

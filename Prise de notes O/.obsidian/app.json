@@ -3,7 +3,7 @@
   "attachmentFolderPath": "PJ",
   "alwaysUpdateLinks": true,
   "autoPairBrackets": true,
-  "autoPairMarkdown": false,
+  "autoPairMarkdown": true,
   "smartIndentList": true,
   "autoConvertHtml": false
 }
