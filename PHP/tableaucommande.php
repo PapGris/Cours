@@ -1,5 +1,6 @@
 <?php
 
+
 $commandes = [
     [
         'client' => ['nom' => 'Dupont', 'prenom' => 'Jean'],
@@ -138,6 +139,7 @@ function calculerTailleCommande($Total) {
             <tr style="background-color:brown;color:white;">
                 <th>Nom</th>
                 <th>Prénom</th>
+                <th>Date</th>
                 <th>Total Commande</th>
                 <th>Réduction</th>
                 <th>Montant de la réduction</th>
@@ -156,6 +158,7 @@ function calculerTailleCommande($Total) {
                 echo "<tr>
                     <td>". $commande['client']["nom"]." </td>
                     <td>". $commande['client']["prenom"]." </td>
+                    <td>". $commande['client']["nom"]." </td>
                     <td>". $totalCommande." </td>
                     <td>". $reduction." </td>
                     <td>". $afficherReduction."</td>
