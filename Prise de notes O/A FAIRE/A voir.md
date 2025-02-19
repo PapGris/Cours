@@ -13,3 +13,8 @@ difference SQL / NoSQL
 
 GRID Template
 back too top
+
+Box sizing (CSS)
+
+balise ```<article>```
+
