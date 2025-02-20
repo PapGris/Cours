@@ -1,0 +1,152 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+header {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center; 
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+main {
+    background: white;
+    padding: 30px;
+    padding-right: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin-top: 80px;
+    margin-right: 20px;
+}
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+input, button {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ff7e5f;
+    border-radius: 5px;
+}
+
+/* Style général du tableau */
+.options-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.options-table th,
+.options-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.options-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.options-table td {
+    font-size: 14px;
+}
+
+.options-table input {
+    margin: 0; /* Assure que les cases sont alignées correctement */
+}
+
+
+button {
+    background: #ff7e5f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+button:hover {
+    background: #e76f51;
+}
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #dff0d8;
+    color: #155724;
+    border-left: 5px solid #155724;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Style pour le tableau des détails de la commande */
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.details-table th,
+.details-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.details-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.details-table td {
+    font-size: 14px;
+}
+
+.details-table tr:last-child td {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.details-table tr:last-child th {
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #e7f5e4;
+}
+
+.upload {
+    background: white;
+    padding: 30px;
+    padding-right: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+.telecharger {
+    background: #ff7e5f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 5px;
+}
+
+.telecharger:hover {
+    background: #e76f51;
+}
