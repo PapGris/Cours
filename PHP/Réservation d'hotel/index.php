@@ -1,5 +1,7 @@
 <?php 
         include 'header.php'; 
+        include 'data.php';
+        
 
         function calculateTotalPrice($startDate, $endDate, $numPersons, $options = []) { // → Définit une fonction appelée calculateTotalPrice().
             $baseRate = 100; // Tarif de base par nuit est 100€
@@ -11,17 +13,37 @@
             $totalPrice = $numNights * $baseRate; // Calcul du prix initial
             // Multiplie le nombre de nuits ($numNights) par le tarif de base ($baseRate).
             
-            
-            if ($numNights >= 7) $totalPrice *= 0.9;// Réduction pour séjours de 7 nuits ou plus
+            // Vérification de la fidélité du client
+            $clientReservations = rand(0,15);
+            $clientReservations = isset($_SESSION['client_reservations']) ? $_SESSION['client_reservations'] : 0;
+            if ($clientReservations > 5) {
+                $totalPrice *= 0.9; // 10% de réduction pour un client fidèle
+            }
+
+            // Réduction pour séjours de 7 nuits ou plus
+            if ($numNights >= 7) {
+                $totalPrice *= 0.9;// Réduction pour séjours de 7 nuits ou plus
             // Si le séjour dure au moins 7 nuits, on applique une réduction de 10%.
-            
+            }
+
             for ($i = 0; $i < $numNights; $i++) { // Surcharge pour le week-end
                 // Boucle for : Parcourt chaque nuit du séjour.
                 $dayOfWeek = (new DateTime($startDate))->modify("+$i days")->format('N');
                 // modify("+$i days") → Ajoute $i jours à $startDate pour vérifier chaque jour.
                 // format('N') → Donne le numéro du jour de la semaine (1 = lundi, ..., 7 = dimanche).
-                if ($dayOfWeek >= 5) { $totalPrice *= 1.2; break; }
-                // Si un jour tombe un vendredi, samedi ou dimanche, applique +20% de surcharge (*= 1.2) et stoppe la boucle (break;)
+                if ($dayOfWeek >= 5) { $totalPrice *= 1.2; 
+                break; 
+                }// Si un jour tombe un vendredi, samedi ou dimanche, applique +20% de surcharge (*= 1.2) et stoppe la boucle (break;)
+            }
+
+            // Vérification de la saison pour appliquer la majoration ou réduction
+            $startMonth = (new DateTime($startDate))->format('m'); // Récupère le mois de la date de début
+            if (in_array($startMonth, ['06', '07', '08', '12'])) {
+                // Haute saison (juin, juillet, août, décembre)
+                $totalPrice *= 1.25; // 25% de majoration
+            } elseif (in_array($startMonth, ['01', '02', '11'])) {
+                // Basse saison (janvier, février, novembre)
+                $totalPrice *= 0.85; // 15% de réduction
             }
         
             // Ajout des options
@@ -34,6 +56,12 @@
             if (in_array('vue_mer', $options)) $totalPrice += 20 * $numNights;
             // in_array('vue_mer', $options) → Vérifie si "vue_mer" est sélectionné
             // Ajoute 20€ par nuit.
+
+            // Application de la taxe de 5%
+            $totalPrice *= 1.05; // 5% de taxe
+
+            // Frais de service fixe de 20€
+            $totalPrice += 20; // Frais de service
         
             return $totalPrice; // Renvoie le montant total après calculs.
         }
@@ -45,6 +73,16 @@
         <section class="reservation-form">
             <h2>Faire une réservation</h2>
             <form action="index.php" method="POST"> <!-- But : La balise <form> définit un formulaire HTML qui permet à l'utilisateur de    soumettre des données. -->
+                <label for="roomType">Type de chambre :</label>
+                <select id="roomType" name="roomType" required>
+                    <option value="standard">Standard</option>
+                    <option value="deluxe">Deluxe</option>
+                    <option value="suite">Suite</option>
+                </select>
+                <br><br>
+                <label for="numRooms">Nombre de chambres :</label>
+                <input type="number" id="numRooms" name="numRooms" min="1" value="1" required>
+                <br>
                 <label for="startDate">Date de début :</label>
                 <input type="date" id="startDate" name="startDate" required>
 
@@ -89,6 +127,8 @@
             // "GET" : pour les requêtes GET.
             // "POST" : pour les requêtes POST.
             // L'instruction if ($_SERVER["REQUEST_METHOD"] == "POST") vérifie donc si la méthode de la requête est POST, ce qui signifie que le formulaire a été soumis. Ce bloc de code ne sera exécuté que lorsque l'utilisateur soumet le formulaire (en cliquant sur le bouton "Calculer le prix").
+            $numRooms = $_POST["numRooms"]; // Récupération du nombre de chambres
+            $roomType = $_POST["roomType"]; // Cela permet d'obtenir la valeur du champ roomType envoyé via le formulaire.
             $startDate = $_POST["startDate"]; // $_POST["startDate"] : C'est une superglobale en PHP qui contient toutes les données envoyées via la méthode POST.
             // $_POST["startDate"] correspond au champ startDate du formulaire HTML, qui est un champ de type date.
             // $startDate contient donc la date de début de la réservation choisie par l'utilisateur dans le formulaire (par exemple, "2025-02-20").
@@ -112,11 +152,59 @@
                         // $options : un tableau contenant les options sélectionnées (ou un tableau vide si aucune option n'est sélectionnée).
                     
                 // Ces informations sont ensuite utilisées pour calculer le prix total et afficher un résumé détaillé de la commande.
+                        
 
+                 // Vérification de la validité des dates
+                if (!strtotime($startDate) || !strtotime($endDate)) {
+                    echo "<p style='color:red;'>❌ Une ou les deux dates sont invalides.</p>";
+                    exit();
+                }
+            
+                if (strtotime($startDate) >= strtotime($endDate)) {
+                    echo "<p style='color:red;'>❌ La date de début doit être avant la date de fin.</p>";
+                    exit();
+                }
+
+                // Vérification du nombre de personnes et de chambres
+                if ($numPersons <= 0 || $numRooms <= 0) {
+                    echo "<p style='color:red;'>❌ Le nombre de personnes et de chambres doit être supérieur à zéro.</p>";
+                    exit();
+                }
+
+
+                if (!isset($_SESSION['reservations'])) { // ➝ Vérifie si $_SESSION['reservations'] existe.
+                    $_SESSION['reservations'] = []; // ➝ Si ce n'est pas le cas, il initialise un tableau vide pour stocker les réservations.
+                }
+            
+                $nbReserves = 0;
+                foreach ($_SESSION['reservations'] as $reservation) { // ➝ Parcourt les réservations enregistrées en session.
+                    if ($reservation['roomType'] == $roomType && ( // ➝ Vérifie si une réservation du même type de chambre existe sur les mêmes dates.
+                        ($startDate >= $reservation['startDate'] && $startDate < $reservation['endDate']) ||
+                        ($endDate > $reservation['startDate'] && $endDate <= $reservation['endDate']) ||
+                        ($startDate <= $reservation['startDate'] && $endDate >= $reservation['endDate'])
+                    )) {
+                        $nbReserves++; // ➝ Incrémente $nbReserves pour compter combien de chambres sont déjà prises.
+                    }
+                }
+            
+                if ($nbReserves + $numRooms > $chambres_disponibles[$roomType]) { // ➝ Compare $nbReserves avec le nombre de chambres disponibles ($chambres_disponibles[$roomType]) + // ✅ Vérification avec nombre de chambres
+                    echo "<p style='color:red; font-weight: bold;'>❌ Désolé, votre demande dépasse la disponibilité actuelle. Il reste seulement " . 
+                    ($chambres_disponibles[$roomType] - $nbReserves) . " chambre(s) disponible(s) pour ce type.</p>";
+                    exit(); // Stoppe l'exécution pour empêcher l'ajout en session
+                } else { // ➝ Affiche un message d’erreur si toutes les chambres sont prises.
+                    // Ajouter la réservation dans la session
+                    $_SESSION['reservations'][] = [
+                        'roomType' => $roomType,
+                        'startDate' => $startDate,
+                        'endDate' => $endDate
+                    ]; // ➝ Enregistre la réservation en session si une chambre est disponible.
 
 
             // Calcul du prix total
             $totalPrice = calculateTotalPrice($startDate, $endDate, $numPersons, $options);
+            $totalPrice *= $numRooms; // ✅ Multiplication par le nombre de chambres
+
+            echo "<p>Réservation confirmée ! Prix total : $totalPrice €</p>"; // ➝ Affiche un message de confirmation et le prix total de la réservation.
 
             // Détails de la commande
             echo "<section class='result'>";
@@ -131,12 +219,23 @@
                         </tr>
                     </thead>
                     <tbody>";
+            echo "<tr><td>Type de chambre</td><td>{$roomType}</td></tr>";
+            echo "<tr><td>Nombre de chambres</td><td>{$numRooms}</td></tr>";
 
             // Calcul des nuits et du tarif de base
             $baseRate = 100; // Tarif de base par nuit
             $numNights = (new DateTime($startDate))->diff(new DateTime($endDate))->days;
             $basePrice = $numNights * $baseRate;
             echo "<tr><td>Tarif de base ({$numNights} nuit(s))</td><td>{$basePrice}€</td></tr>";
+
+            // Réduction pour fidélité (si applicable)
+            $loyaltyDiscount = 0;
+            $clientReservations = isset($_SESSION['client_reservations']) ? $_SESSION['client_reservations'] : 0;
+            if ($clientReservations > 5) {
+                $loyaltyDiscount = $basePrice * 0.1;  // 10% de réduction
+                $basePrice -= $loyaltyDiscount;
+                echo "<tr><td>Réduction fidélité (10% pour plus de 5 réservations)</td><td>-{$loyaltyDiscount}€</td></tr>";
+            }
 
             // Réduction si séjour de 7 nuits ou plus
             if ($numNights >= 7) {
@@ -158,6 +257,19 @@
                 echo "<tr><td>Surcharge week-end (+20%)</td><td>{$weekendSurcharge}€</td></tr>";
             }
 
+            // Vérification de la saison pour appliquer la majoration ou réduction
+            $startMonth = (new DateTime($startDate))->format('m');
+            $saisonPrice = 0;
+            if (in_array($startMonth, ['06', '07', '08', '12'])) {
+                $saisonPrice = $basePrice * 0.25; // 25% de majoration en haute saison
+                $basePrice += $saisonPrice;
+                echo "<tr><td>Majoration haute saison (juin, juillet, août, décembre)</td><td>+{$saisonPrice}€</td></tr>";
+            } elseif (in_array($startMonth, ['01', '02', '11'])) {
+                $saisonPrice = $basePrice * 0.15; // 15% de réduction en basse saison
+                $basePrice -= $saisonPrice;
+                echo "<tr><td>Réduction basse saison (janvier, février, novembre)</td><td>-{$saisonPrice}€</td></tr>";
+            }
+
             // Affichage des options sélectionnées
             if (in_array('petit_dejeuner', $options)) {
                 $mealPrice = 10 * $numNights * $numPersons;
@@ -171,16 +283,28 @@
                 echo "<tr><td>Vue sur mer</td><td>+{$seaViewPrice}€</td></tr>";
             }
 
+            // Application de la taxe de 5%
+            $tax = $basePrice * 0.05;
+            $basePrice += $tax;
+            echo "<tr><td>Taxe de 5%</td><td>+{$tax}€</td></tr>";
+                    
+            // Frais de service fixes
+            $serviceFee = 20;
+            $basePrice += $serviceFee;
+            echo "<tr><td>Frais de service</td><td>+{$serviceFee}€</td></tr>";
+
             // Affichage du prix total
             echo "<tr><th>Total</th><th>{$totalPrice}€</th></tr>";
 
             echo "</tbody></table>";
             echo "</section>";
         }
+    }
 
         
         ?>
     </main>
+    
     <div class="upload">
         <h2>Télécharger un fichier</h2>
         <form action="upload.php" method="post" enctype="multipart/form-data">
