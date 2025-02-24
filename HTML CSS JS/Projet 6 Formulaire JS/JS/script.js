@@ -20,3 +20,4 @@ document.getElementById('form').addEventListener('submit',function(event){
         event.preventDefault();  // si AllValid ! (faux) alors l'evenement n'a pas lieu
     } 
 });
+

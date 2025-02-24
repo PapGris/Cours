@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
-    <script src="JS/script.js" defer></script>
+    <script src="JS/script2.js" defer></script>
     <title>Formulaire d'inscription</title>
 </head>       
 <body>
@@ -12,29 +12,29 @@
         <h1>Inscription</h1>
         <div>
             <label for="name">Nom <span class="requierd">*</span>:</label>
-            <input id="name" type="text"><br>
+            <input id="name" type="text" required><br>
         </div>
         <div>
             <label for="firstname">Prénom <span class="requierd">*</span>:</label>
-            <input id="firstname" type="text"><br>
+            <input id="firstname" type="text" required><br>
         </div>
         <div> 
             <label for="email">Email <span class="requierd">*</span>:</label>
-            <input id="email" type="text"><br>
+            <input id="email" type="text" required><br>
         </div>
         <div>
             <label for="password">Mot de passe <span class="requierd">*</span>:</label>
-            <input id="password" type="password"><br>
+            <input id="password" type="password" required><br>
         </div>
         <div>
             <label for="confirm_password">Répéter le mot de passe <span class="requierd">*</span>:</label>
-            <input id="confirm_password" type="password"><br>
+            <input id="confirm_password" type="password" required><br>
         </div>
         <div>
             <label>J'accepte les conditions générales d'utilisation</label>
-            <input type="checkbox">Oui<span class="requierd">*</span><br><br>
+            <input type="checkbox">Oui<span class="requierd" requierd>*</span><br><br>
         </div>
-        <input class="submit" type="submit" value="s'inscrire">
+        <input class="submit" id="btn" type="submit" value="s'inscrire">
     </form>
 </body>
 </html>

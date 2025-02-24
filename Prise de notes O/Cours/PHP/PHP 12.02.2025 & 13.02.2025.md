@@ -6,7 +6,7 @@ Affichage :
 ```php
 echo "Hello World.";
 print_r($tableau);
-var_dumb($variable);
+var_dump($variable);
 die;
 ```
 
