@@ -18,3 +18,13 @@ Box sizing (CSS)
 
 balise ```<article>```
 
+requete préparées
+
+fetch en JS -> Asynchrone
+
+Regarder comment fonctionne l'import/export en JS
+
+$_POST
+
+requete préparée
+
