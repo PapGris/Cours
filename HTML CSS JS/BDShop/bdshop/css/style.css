@@ -1,0 +1,279 @@
+/* Styles généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #f8f9fa, #e9ecef);
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+.container {
+    padding: 20px;
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: #ff4500;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-height: 60px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+.addToCart {
+    display: block;
+    width: 100%;
+    margin: 12px auto;
+    padding: 14px;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #ff6600, #ff3300);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.addToCart:hover {
+    background: linear-gradient(135deg, #e65c00, #cc2900);
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.5);
+}
+
+article {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Panier - Visible en permanence mais rétréci */
+nav.navRight {
+    background: linear-gradient(135deg, #ff6600, #ff3300);
+    position: fixed;
+    right: 0; /* Position visible sur la droite de l'écran */
+    top: 0;
+    height: 100%;
+    width: 100px; /* Largeur réduite du panier */
+    border-radius: 15px 0 0 15px; /* Coins arrondis */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+    transition: right 0.5s ease-in-out;
+    z-index: 9999;
+}
+
+.navRight h2 {
+    font-size: 25px;
+}
+
+/* Lorsque la souris survole la nav, elle s'ouvre complètement */
+nav.navRight:hover {
+    width: 350px; /* Largeur complète du panier lors du survol */
+    transition: 1s;
+    font-size: 50px bold;
+}
+
+nav.navRight:not(:hover) { 
+    transition: 1s; /* L'animation de la fermeture dure aussi 1 seconde */
+}
+
+/* Liste des articles */
+nav.navRight .cartItems {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 1fr; /* Par défaut une seule colonne */
+    gap: 15px; /* Espacement entre les cartes */
+}
+
+/* Élément du panier sous forme de carte */
+nav.navRight .cartItems .cartItem {
+    background: #f7f7f7;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav.navRight .cartItems .cartItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image du produit dans le panier (cartItem img) */
+nav.navRight .cartItems .cartItem img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* Détails du produit dans la carte */
+nav.navRight .cartItems .cartItem .itemDetails {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+nav.navRight .cartItems .cartItem .itemDetails span {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Suppression du produit */
+nav.navRight .cartItems .cartItem .remove-item {
+    cursor: pointer;
+    color: #ff3300;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+nav.navRight .cartItems .cartItem .remove-item:hover {
+    color: #cc2900;
+}
+
+/* Panier avec scroll */
+.cart-list {
+    max-height: 100%; /* hauteur maximale du panier */
+    overflow-y: auto;  /* Permet de faire défiler le panier verticalement */
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+/* Style de chaque élément du panier */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* Cela assure que l'image et le texte sont bien espacés */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Ajoute une séparation entre les articles */
+}
+
+/* Style de l'image dans le panier */
+.cart-item img {
+    width: 50px; /* La taille de l'image (ajustée à 50px) */
+    height: auto;
+    margin-right: 10px; /* Espace entre l'image et le texte */
+}
+
+/* Style du texte dans le panier */
+.cart-item span {
+    flex-grow: 1;  /* Cela permet d'espacer le nom/quantité et les actions si tu en ajoutes */
+    text-align: left;  /* Aligne le texte à gauche */
+    font-size: 14px;   /* Ajuste la taille du texte */
+}
+
+/* Responsiveness */
+@media (min-width: 500px) {
+    body { 
+        border-top: 5px solid orange;
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+    body { 
+        border-top: 5px solid yellow;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    .addToCart {
+        font-size: 1.3rem;
+    }
+    article {
+        min-height: 470px;
+    }
+}
+
+@media (min-width: 992px) {
+    body { 
+        border-top: 5px solid green;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    .addToCart {
+        font-size: 1.4rem;
+    }
+    article {
+        min-height: 500px;
+    }
+}
+
+@media (min-width: 1199px) {
+    body { 
+        border-top: 5px solid blue;
+    }
+    .container {
+        max-width: 1140px;
+    }
+    .row {
+        justify-content: space-between;
+    }
+    article {
+        padding: 22px;
+        min-height: 520px;
+    }
+}
+
+@media (min-width: 1400px) {
+    body { 
+        border-top: 5px solid violet;
+    }
+    .container {
+        max-width: 1320px;
+    }
+    h3 {
+        font-size: 2.2rem;
+    }
+}
