@@ -28,3 +28,7 @@ $_POST
 
 requete préparée
 
+fetch
+
+opperateur ternaire PHP
+

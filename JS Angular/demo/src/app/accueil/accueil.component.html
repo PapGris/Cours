@@ -1,0 +1,27 @@
+
+<div class="ligne">
+    <label>URL Image :</label>
+    <input [(ngModel)]="urlImageSaisie" placeholder="https://image.com/">
+    <div class="bouton" (click)="onClicAjouterImage()   ">Ajouter image</div>
+</div>
+
+<div class="categories">
+    @for(categorie of categories; track $index) {
+
+        <div class="categorie">
+
+            <div class="header">
+                <span>{{categorie.titre}}</span>
+            </div>
+
+            @for(image of categorie.images; track $index) {
+
+                <div class="image"><img src="{{image}}"></div>
+
+            }
+
+        </div>
+
+    }
+
+</div>

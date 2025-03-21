@@ -27,16 +27,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cours/Design/UX Web Design 07.01.2025.md",
+                "file": "Cours/BDD/MCD - MLD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UX Web Design 07.01.2025"
+              "title": "MCD - MLD"
+            }
+          },
+          {
+            "id": "f822749d7a9cfc10",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-03-20 20.25.22.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-03-20 20.25.22.excalidraw"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -175,15 +187,19 @@
       "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "e83691ea43a83570",
+  "active": "f822749d7a9cfc10",
   "lastOpenFiles": [
-    "Cours/Design/WB 14.01.2025.md",
+    "Cours/BDD/MCD - MLD.md",
+    "Excalidraw/Drawing 2025-03-20 20.25.22.excalidraw.md",
+    "Excalidraw/Drawing 2025-01-06 08.40.58.excalidraw.md",
+    "Cours/BDD/Commande SQL.md",
+    "A FAIRE/A voir.md",
+    "Cours/PHP/Tips.md",
     "Cours/Design/UX Web Design 07.01.2025.md",
+    "Cours/Design/WB 14.01.2025.md",
     "Cours/Design/FIGMA.md",
     "A FAIRE/Lien utile.md",
-    "Cours/PHP/Tips.md",
     "Cours/JS/17.02.2025.md",
-    "A FAIRE/A voir.md",
     "Cours/JS/Ajax/04.03.2025.md",
     "Cours/PHP/PHP 12.02.2025 & 13.02.2025.md",
     "Cours/PHP/18.02.2025 Les Dates.md",
@@ -211,11 +227,7 @@
     "Cours/HTML CSS/10.01.2025.md",
     "Cours/PHP",
     "Excalidraw/MCD Exemple.md",
-    "Cours/BDD/MCD - MLD.md",
     "Cours/BDD/MongoDB.md",
-    "Cours/BDD/Commande SQL.md",
-    "Cours/BDD/Autre.md",
-    "Projet Fil Rouge/Référentiel d'évaluation.md",
     "Projet Fil Rouge",
     "PJ",
     "Cours/HTML CSS/10.01.2025",
