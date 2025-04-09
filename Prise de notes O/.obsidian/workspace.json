@@ -4,51 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "a573c04474434ebc",
+        "id": "b009c4d78148a587",
         "type": "tabs",
         "children": [
           {
-            "id": "86bebb0061f20b60",
+            "id": "ce1688bf55ef4196",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cours/PHP/18.02.2025 Les Dates.md",
+                "file": "Excalidraw/Sans titre 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "18.02.2025 Les Dates"
-            }
-          },
-          {
-            "id": "e83691ea43a83570",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cours/BDD/MCD - MLD.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MCD - MLD"
-            }
-          },
-          {
-            "id": "f822749d7a9cfc10",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing 2025-03-20 20.25.22.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2025-03-20 20.25.22.excalidraw"
+              "title": "Sans titre 2"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -187,10 +160,19 @@
       "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "f822749d7a9cfc10",
+  "active": "ce1688bf55ef4196",
   "lastOpenFiles": [
+    "Excalidraw/Sans titre 1.md",
+    "Excalidraw/Sans titre 2.md",
+    "Excalidraw/Tableau observation WD.md",
+    "Excalidraw/Zoning.md",
+    "Excalidraw/Drawing 2025-03-23 13.52.29.excalidraw.md",
     "Cours/BDD/MCD - MLD.md",
+    "Dossier Professionnel/Partie Front end - Exemple 1.md",
     "Excalidraw/Drawing 2025-03-20 20.25.22.excalidraw.md",
+    "Sans titre",
+    "Excalidraw/Sans titre.md",
+    "Dossier Professionnel",
     "Excalidraw/Drawing 2025-01-06 08.40.58.excalidraw.md",
     "Cours/BDD/Commande SQL.md",
     "A FAIRE/A voir.md",
@@ -213,10 +195,6 @@
     "PJ/Pasted image 20250225102933.png",
     "Cours/JS/18.02.2025.md",
     "A FAIRE/Stage.md",
-    "A FAIRE/Portfolio.md",
-    "A FAIRE/Examen.md",
-    "A FAIRE/CRUD.md",
-    "A FAIRE/Autres.md",
     "PJ/Pasted image 20250220162118.png",
     "PJ/Pasted image 20250220162104.png",
     "PJ/Pasted image 20250220162010.png",
@@ -224,17 +202,12 @@
     "PJ/Pasted image 20250220161921.png",
     "PJ/Pasted image 20250220145920.png",
     "Cours/JS",
-    "Cours/HTML CSS/10.01.2025.md",
     "Cours/PHP",
-    "Excalidraw/MCD Exemple.md",
-    "Cours/BDD/MongoDB.md",
     "Projet Fil Rouge",
     "PJ",
     "Cours/HTML CSS/10.01.2025",
     "Cours/HTML CSS",
     "Cours/Design/Tableau Observation WD.canvas",
-    "A FAIRE/Wordpress",
-    "A FAIRE",
-    "Cours/Design"
+    "A FAIRE/Wordpress"
   ]
 }
