@@ -27,21 +27,42 @@ app.get('/', (req, res) => {
     res.send('HEEEEEEEEEEEEEEEEY Salut a tous les amis !');
 });
 
-app.get("/categories", (req, res) => {
+app.delete("/image/:id", (req, res) => {
+    const imageId = req.params["id"];
 
-    connection.query
-        ("SELECT c.categorie_id, c.categorie_titre, i.image_url FROM categorie C JOIN image i ON c.categorie_id = i.categorie_id", 
-            (err, categories) => {
-                const resultat = [];
+    connection.query(
+        "DELETE FROM image i WHERE i.image_id = ?", 
+        [imageId], (err, resultat) => {
 
-                for (let categorie of categories){
-                    if(resultat.filter(c => c.categorie_id === categorie.categorie_id)){
+            res.json({message: "Image supprimée"});
+    
+    });;
 
+});
+
+app.get("/categories", (req, res) =>{
+
+    connection.query("SELECT c.categorie_id, c.categorie_titre, i.image_url FROM categorie C LEFT JOIN image i ON c.categorie_id = i.categorie_id", (err, resultat)=>{
+            const categories = [];
+
+            for (let ligne of resultat){
+
+                const categorieExistante = categories.find(c => c.id === ligne.categorie_id);
+                //si on a déjà ajouté cette catégorie à la liste des résulats
+                if(categorieExistante){
+                    categorieExistante.images.push(ligne.image_url);
+                } else{
+                    // categories.push({id: ligne.categorie_id, titre: ligne.categorie_titre, images: [ligne.image_url]});
+                    if(ligne.image_url){
+                        categories.push({id: ligne.categorie_id, titre: ligne.categorie_titre, images: [ligne.image_url]});
+                    } else {
+                        categories.push({id: ligne.categorie_id, titre: ligne.categorie_titre, images: []});
+                    }
                 }
             }
             res.json(categories);
-
     });
+});
 
 // const categories = [
 //         {
@@ -100,7 +121,7 @@ app.get("/categories", (req, res) => {
 //         }
     // ];
 //     res.json(categories);
-});
+// });
 
 app.listen(5000, () => {
     console.log('Server is running on port 5000');

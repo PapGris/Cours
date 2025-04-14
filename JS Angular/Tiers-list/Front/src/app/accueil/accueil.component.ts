@@ -100,9 +100,11 @@ export class AccueilComponent {
   }
 
   onClicSupprimerImage(indexCategorie: number,indexImage:number) {
-  this.categories[indexCategorie].images.splice(indexImage,1);
 
-  this.sauvegarde();
+    // -- Exemple local storage
+  //this.categories[indexCategorie].images.splice(indexImage,1);
+
+  //this.sauvegarde();
   }
 
   sauvegarde() {
