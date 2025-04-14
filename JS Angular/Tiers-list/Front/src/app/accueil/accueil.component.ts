@@ -3,8 +3,14 @@ import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 type Categorie = {
-  titre: string; 
-  images: string[];
+  id: number,
+  titre: string,
+  images: Image[];
+};
+
+type Image = {
+  image_id: number,
+  image_url: string;
 };
 
 @Component({
@@ -25,9 +31,7 @@ export class AccueilComponent {
 
   ngOnInit() {
 
-    this.http
-      .get<Categorie[]>('http://localhost:5000/categories')
-      .subscribe(categories => this.categories = categories);
+    this.refresh();
 
 
   //   const enregistrement = localStorage.getItem("categories");
@@ -68,19 +72,30 @@ export class AccueilComponent {
   //   this.categories = JSON.parse(localStorage.getItem('categories')!);
   }
 
+  refresh() { 
+    this.http.get<Categorie[]>('http://localhost:5000/categories')
+    .subscribe(categories => this.categories = categories);
+  }
   onClicAjouterImage() {
-    this.categories[this.categorieSelectionner].images.push(this.urlImageSaisie)
-    this.urlImageSaisie = "";
+        this.http
+      .post('http://localhost:5000/categories', {
+        url: this.urlImageSaisie, 
+        categorie_id: this.categorieSelectionner
+      })
+    .subscribe(resultat => this.refresh());
+    // this.categories[this.categorieSelectionner].images.push(this.urlImageSaisie)
+    // this.urlImageSaisie = "";
 
-    this.sauvegarde();
+    // this.sauvegarde();
   }
   
-  onClickAjouterCategorie() {
-    this.categories.push({
-      titre: this.nomCategorieSaisie,
-      images: [],
-    });
-    this.nomCategorieSaisie = "";
+  onClicAjouterCategorie() {
+
+    // this.categories.push({
+    //   titre: this.nomCategorieSaisie,
+    //   images: [],
+    // });
+    // this.nomCategorieSaisie = "";
   }
 
   onClicSupprimerCategorie(indexCategorie: number) {
@@ -99,7 +114,10 @@ export class AccueilComponent {
     this.sauvegarde();
   }
 
-  onClicSupprimerImage(indexCategorie: number,indexImage:number) {
+  onClicSupprimerImage(indexImage:number) {
+
+    this.http.delete("http://localhost:5000/image/" + indexImage)
+    .subscribe(resultat => this.refresh());
 
     // -- Exemple local storage
   //this.categories[indexCategorie].images.splice(indexImage,1);

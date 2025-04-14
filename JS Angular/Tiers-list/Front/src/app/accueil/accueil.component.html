@@ -4,7 +4,7 @@
     <input [(ngModel)]="urlImageSaisie" placeholder="https://image.com/">
     <select [(ngModel)]="categorieSelectionner">
         @for(categorie of categories; track $index) {
-            <option value="{{$index}}">{{categorie.titre}}</option>
+            <option value="{{categorie.id}}">{{categorie.titre}}</option>
         }
     </select>
     <div class="bouton" (click)="onClicAjouterImage()">Ajouter image</div>
@@ -13,7 +13,7 @@
 <div class="ligne">
     <label>Nouvelle catégorie</label>
     <input [(ngModel)]="nomCategorieSaisie" placeholder="ex : Parfait">
-    <div class="bouton" (click)="onClickAjouterCategorie()">Ajouter la catégorie</div>
+    <div class="bouton" (click)="onClicAjouterCategorie()">Ajouter la catégorie</div>
 </div>
 
 <div class="categories">
@@ -35,8 +35,8 @@
                     @if(indexCategorie < categories.length - 1) {
                     <div class="bouton bouton-moins" (click)="onClicDeplacerImage(indexCategorie,indexImage)">➖</div>
                     }
-                    <div class="bouton bouton-supp" (click)="onClicSupprimerImage(indexCategorie,indexImage)">❌</div>
-                    <img src="{{image}}" alt="image">
+                    <div class="bouton bouton-supp" (click)="onClicSupprimerImage(image.image_id)">❌</div>
+                    <img src="{{image.image_url}}" alt="image">
                 </div>
 
             }
