@@ -78,41 +78,64 @@ export class AccueilComponent {
   }
   onClicAjouterImage() {
         this.http
-      .post('http://localhost:5000/categories', {
+      .post(
+        'http://localhost:5000/image', {
         url: this.urlImageSaisie, 
         categorie_id: this.categorieSelectionner
       })
     .subscribe(resultat => this.refresh());
     // this.categories[this.categorieSelectionner].images.push(this.urlImageSaisie)
-    // this.urlImageSaisie = "";
+    this.urlImageSaisie = "";
 
     // this.sauvegarde();
   }
   
   onClicAjouterCategorie() {
 
+            this.http
+      .post(
+        'http://localhost:5000/categorie', {
+        titre: this.nomCategorieSaisie
+      })
+    .subscribe(resultat => this.refresh());
     // this.categories.push({
     //   titre: this.nomCategorieSaisie,
     //   images: [],
     // });
-    // this.nomCategorieSaisie = "";
+    this.nomCategorieSaisie = "";
   }
 
   onClicSupprimerCategorie(indexCategorie: number) {
-  this.categories.splice(indexCategorie,1);
 
-  this.sauvegarde();
+    this.http.delete("http://localhost:5000/categorie/" + indexCategorie)
+    .subscribe(resultat => this.refresh());
+
+  // this.categories.splice(indexCategorie,1);
+
+  // this.sauvegarde();
   }
 
-  onClicDeplacerImage(indexCategorie: number,indexImage: number, descendre :boolean = true) {
-    let url = this.categories[indexCategorie].images[indexImage];
 
-    this.categories[indexCategorie + (descendre ? 1 : -1) ].images.push(url);
+  onClicDeplacerImage(
+    indexCategorie: number, 
+    indexImage: number, 
+    descendre: boolean = true
+  ) {
+  const image = this.categories[indexCategorie].images[indexImage];
+  const nouvelleCategorieId = this.categories[indexCategorie + (descendre ? 1 : -1)].id;
 
-    this.categories[indexCategorie].images.splice(indexImage,1);
+  this.http.put("http://localhost:5000/image/" + image.image_id {
+    categorie_id: nouvelleCategorieId
+  }).subscribe(resultat => this.refresh());
+}
+    // let url = this.categories[indexCategorie].images[indexImage];
 
-    this.sauvegarde();
-  }
+    // this.categories[indexCategorie + (descendre ? 1 : -1) ].images.push(url);
+
+    // this.categories[indexCategorie].images.splice(indexImage,1);
+
+    // this.sauvegarde();
+  
 
   onClicSupprimerImage(indexImage:number) {
 

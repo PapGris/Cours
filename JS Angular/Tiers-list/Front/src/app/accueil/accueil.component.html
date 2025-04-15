@@ -23,7 +23,7 @@
 
             <div class="header">
                 <span>{{categorie.titre}}</span>
-                <div class="bouton bouton-plus" (click)="onClicSupprimerCategorie(indexCategorie)">❌</div>
+                <div class="bouton bouton-plus" (click)="onClicSupprimerCategorie(categorie.id)">❌</div>
             </div>
 
             @for(image of categorie.images; track indexImage; let indexImage=$index) {

@@ -34,8 +34,6 @@ app.delete("/image/:id", (req, res) => {
         "DELETE FROM image WHERE image_id = ?", 
         [imageId], (err, resultat) => {
 
-            console.log(err);
-
             res.json({message: "Image supprimée"});
     
     });;
@@ -44,13 +42,57 @@ app.delete("/image/:id", (req, res) => {
 
 app.post("/image", (req, res) => {
     
-
-    res.json({message: "Image ajoutée"});
+    connection.query(
+        "INSERT INTO image (image_url, categorie_id) VALUES (?, ?)", 
+        [req.body.url, req.body.categorie_id], (err, resultat) => {
+            
+            res.json({message: "Image ajoutée"});
+        }
+    )
 })
+
+app.put("/image/:id", (req, res) => { 
+    const imageId = req.params["id"];
+    const categorieId = req.body.categorie_id;
+
+    connection.query(
+        "UPDATE image SET categorie_id = ? WHERE image_id = ?", 
+        [categorieId, imageId], (err, resultat) => {
+                
+                res.json({message: "Image déplacée"});
+        }
+    )
+})
+    
+
+app.post("/categorie", (req, res) => {
+    
+    connection.query(
+        "INSERT INTO categorie (categorie_titre) VALUES (?)", 
+        [req.body.titre], (err, resultat) => {
+            
+            res.json({message: "Categorie ajoutée"});
+        }
+    )
+})
+
+app.delete("/categorie/:id", (req, res) => {
+    const categorieId = req.params["id"];
+
+    connection.query(
+        "DELETE FROM categorie WHERE categorie_id = ?", 
+        [categorieId], (err, resultat) => {
+
+            res.json({message: "Categorie supprimée"});
+    
+    });;
+
+});
 
 app.get("/categories", (req, res) =>{
 
-    connection.query("SELECT c.categorie_id, c.categorie_titre, i.image_url, i.image_id AS image_id FROM categorie C LEFT JOIN image i ON c.categorie_id = i.categorie_id", (err, resultat)=>{
+    connection.query(
+        "SELECT c.categorie_id, c.categorie_titre, i.image_url, i.image_id AS image_id FROM categorie C LEFT JOIN image i ON c.categorie_id = i.categorie_id ORDER BY c.categorie_id", (err, resultat)=>{
             const categories = [];
 
             for (let ligne of resultat){
