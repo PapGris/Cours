@@ -124,7 +124,7 @@ export class AccueilComponent {
   const image = this.categories[indexCategorie].images[indexImage];
   const nouvelleCategorieId = this.categories[indexCategorie + (descendre ? 1 : -1)].id;
 
-  this.http.put("http://localhost:5000/image/" + image.image_id {
+  this.http.put("http://localhost:5000/image/" + image.image_id, {
     categorie_id: nouvelleCategorieId
   }).subscribe(resultat => this.refresh());
 }
