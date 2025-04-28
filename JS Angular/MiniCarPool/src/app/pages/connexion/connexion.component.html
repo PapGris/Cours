@@ -1,0 +1,24 @@
+<br><br>
+<h2 class="text-center">Formulaire de connexion</h2>
+
+<form [formGroup]="formulaire" (ngSubmit)="onConnexion()" class="container global">
+
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput placeholder="Ex: email.eamil@email.com">
+        @if(formulaire.get('email')?.hasError('required')) {
+        <mat-error class="error">⬆️ Email obligatoire</mat-error>
+        } @else if (formulaire.get('email')?.hasError('email')) {
+        <mat-error class="error">⬆️ Email invalide</mat-error>
+        }
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Mot De Passe</mat-label>
+        <input formControlName="password" matInput placeholder="Entrez votre mot de passe" type="password">
+        <mat-error class="error">⬆️ Mot de passe obligatoire</mat-error>
+    </mat-form-field><br>
+
+    <button mat-flat-button>Connexion</button>
+
+</form>

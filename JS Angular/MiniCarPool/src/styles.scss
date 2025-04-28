@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h2.text-center {
+    color: #009090;
+}
+
+form.global {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+    max-width: 800px;
+    margin: 0 auto;
+
+        .error {
+            color: rgb(237, 22, 22);
+        }
+}
